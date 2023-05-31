@@ -1,24 +1,13 @@
-# README
+1. As a user I can see details about a planet
+2. As a user I can add a alien in a planet
+3. As a user I can delete a alien
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Step 1 - Data Brick
+1. models
+2. add validations and associations
+3. add some seeds
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Step 2 - Applicative brick
+1. route
+2. controller action
+3. view

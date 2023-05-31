@@ -11,4 +11,25 @@
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
   border-radius: 5px;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  position: relative;
+}
+
+.card-category-remove-link {
+  color: white;
+  transform: rotate(45deg);
+  text-decoration: none;
+  border-radius: 50%;
+  border: 1px solid white;
+  height: 32px;
+  width: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: .7;
+  position: absolute;
+  top: 8px;
+  right: 8px;
+}
+.card-category-remove-link:hover {
+  opacity: 1;
 }

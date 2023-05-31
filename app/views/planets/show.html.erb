@@ -4,7 +4,7 @@
   </div>
 </div>
 <div class="container mt-3">
-  <%= link_to 'Add an alien', new_planet_alien_path(@planet), class: 'btn btn-success' %>
+  <%#= link_to 'Add an alien', new_planet_alien_path(@planet), class: 'btn btn-success' %>
 
   <div class="row">
     <% @planet.aliens.each do |alien| %>
@@ -16,5 +16,15 @@
       </div>
 
     <% end %>
+  </div>
+  <div class="row justify-content-center mt-3">
+    <div class="col-4">
+      <h3>Add an alien</h3>
+      <%= simple_form_for([@planet, @alien]) do |f| %>
+        <%= f.input :name %>
+        <%= f.input :image_url %>
+        <%= f.button :submit, class: 'btn btn-primary' %>
+      <% end %>
+    </div>
   </div>
 </div>

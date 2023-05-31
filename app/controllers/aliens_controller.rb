@@ -1,9 +1,9 @@
 class AliensController < ApplicationController
-  def new
-    # provide the instances to build the form
-    @alien = Alien.new
-    @planet = Planet.find(params[:planet_id])
-  end
+  # def new
+  #   # provide the instances to build the form
+  #   @alien = Alien.new
+  #   @planet = Planet.find(params[:planet_id])
+  # end
 
   def create
     @alien = Alien.new(alien_params)

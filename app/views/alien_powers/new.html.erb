@@ -1,0 +1,9 @@
+<form action="/aliens/:alien_id/alien_powers"></form>
+<%#= alien_alien_powers_path(@alien) %>
+
+<h1>Add a power</h1>
+<%= simple_form_for([@alien, @alien_power]) do |f| %>
+  <%#= f.input :power, collection: Power.all %>
+  <%= f.association :power %>
+  <%= f.button :submit, class: 'btn btn-primary'  %>
+<% end %>

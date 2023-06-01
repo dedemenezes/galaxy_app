@@ -10,6 +10,12 @@
     <% @planet.aliens.each do |alien| %>
       <div class="col-4">
         <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= alien.image_url %>)">
+          <div class="card-powers">
+            <% alien.powers.each do |power| %>
+              <span><%= power.name %></span>
+            <% end %>
+            <%= link_to '+', new_alien_alien_power_path(alien) %>
+          </div>
           <%= alien.name %>
           <%= link_to '+', alien_path(alien), class: 'card-category-remove-link', data: { turbo_method: :delete, turbo_confirm: "Release #{alien.name}?" } %>
         </div>

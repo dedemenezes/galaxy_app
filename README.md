@@ -1,6 +1,7 @@
 1. As a user I can see details about a planet
 2. As a user I can add a alien in a planet
 3. As a user I can delete a alien
+4. Add a power to an alien
 
 Step 1 - Data Brick
 1. models

@@ -29,7 +29,26 @@
   position: absolute;
   top: 8px;
   right: 8px;
+  &:hover {
+    opacity: 1;
+  }
 }
-.card-category-remove-link:hover {
-  opacity: 1;
+
+.card-powers {
+  font-size: 12px;
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  width: 86%;
+  span {
+    border: 1px solid gray;
+    padding: 2px 4px;
+    border-radius: 4px;
+    font-weight: 300;
+  }
+
+  a {
+    color: white;
+    font-size: 16px;
+  }
 }

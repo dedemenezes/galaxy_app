@@ -6,7 +6,9 @@ Rails.application.routes.draw do
   resources :planets, only: [:show] do
     resources :aliens, only: [:create]
   end
-  resources :aliens, only: :destroy
+  resources :aliens, only: :destroy do
+    resources :alien_powers, only: [:new, :create]
+  end
 end
 
 # /planets/2/aliens

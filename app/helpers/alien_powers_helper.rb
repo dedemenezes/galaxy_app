@@ -1,0 +1,2 @@
+module AlienPowersHelper
+end

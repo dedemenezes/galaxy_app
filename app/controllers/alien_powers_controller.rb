@@ -5,9 +5,12 @@ class AlienPowersController < ApplicationController
   end
 
   def create
-    @alien_power = AlienPower.new(alien_power_params)
     @alien = Alien.find(params[:alien_id])
-    @alien_power.alien = @alien
+    @powers = Power.where(id: params[:alien_power][:power])
+    @powers.each do |power|
+      @alien_power = AlienPower.new(alien: @alien, power: power)
+      @alien_power.save
+    end
     if @alien_power.save
       redirect_to planet_path(@alien.planet)
     else
@@ -18,6 +21,6 @@ class AlienPowersController < ApplicationController
   private
 
   def alien_power_params
-    params.require(:alien_power).permit(:power_id)
+    params.require(:alien_power).permit(power: [])
   end
 end

@@ -3,7 +3,13 @@
 
 <h1>Add a power</h1>
 <%= simple_form_for([@alien, @alien_power]) do |f| %>
-  <%#= f.input :power, collection: Power.all %>
-  <%= f.association :power %>
+  <%= f.input :power,
+              collection: Power.all,
+              input_html: {
+                multiple: true,
+                class: 'multiple-select',
+                data: { controller: 'tom-select' }
+              } %>
+  <%#= f.association :power %>
   <%= f.button :submit, class: 'btn btn-primary'  %>
 <% end %>
